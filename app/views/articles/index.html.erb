@@ -1,5 +1,5 @@
 <h2> List of All Articles </h2>
-<%= link_to 'back to homepage', root_path %> <br/>
+<%= link_to '<< homepage', root_path %> <br/>
 
 <table>
     <thead>
@@ -7,7 +7,7 @@
             <th>Id</th>
             <th>Title</th>
             <th>Description</th>
-            <th>Actions</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -16,7 +16,7 @@
              <td><%= article.id %></td>
             <td><%= article.title %></td>
             <td><%= article.description %></td>
-            <td><%= link_to 'show', article_path(article) %></td>
+            <td><%= link_to 'Show', article_path(article) %></td>
             <td><%= link_to 'Delete' , articles_delete_path(article), method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
             <td><%= link_to 'Edit', edit_article_path(article) %></td>
            
@@ -24,6 +24,6 @@
         </tr>
       <% end %>
     </tbody>
-    <td><%= link_to 'Create New Article', new_article_path(@article) %></td>
+    <td><%= link_to 'Create Article', new_article_path(@article) %></td>
 
 </table>
