@@ -1,0 +1,15 @@
+<!Doctype html>
+<html>
+<head>
+<title>Show Page For Articles</title>
+</head>
+<body>
+<h2>Show Articles</h2>
+
+<p><strong>Title :</strong> <%=@article.title  %> </p>
+<p><strong>Description : </strong> <%= @article.description %> </p>
+
+<p><%= link_to 'go back', articles_path(@article.id) %></p>
+
+</body>
+</html>
