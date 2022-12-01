@@ -1,5 +1,5 @@
 
-<%= form_with(model: @article, local: true ) do |f| %>
+<%= form_with(model: @article ) do |f| %>
 
   <p> 
     <%= f.label :title %><br/> 
@@ -12,4 +12,5 @@
   <p>
     <%= f.submit %> 
   </p>
+
 <% end %>
